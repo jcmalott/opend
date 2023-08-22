@@ -16,7 +16,6 @@ function Minter() {
     const image = data.image[0];
     const imageByteData = [...new Uint8Array(await image.arrayBuffer())];
 
-    await opend.mint(imageByteData, name);
     const newNFTID = await opend.mint(imageByteData, name);
     setPrincipal(newNFTID);
     setLoaderHidden(true);

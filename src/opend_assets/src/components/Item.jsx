@@ -9,7 +9,8 @@ function Item({id}) {
   const [owner, setOwner] = useState();
   const [image, setImage] = useState();
 
-  const canisterId = Principal.fromText(id);
+  // const canisterId = Principal.fromText(id);
+  const canisterId = id;
   const localhost = "http://localhost:8080/";
   const agent = new HttpAgent({host: localhost});
 
